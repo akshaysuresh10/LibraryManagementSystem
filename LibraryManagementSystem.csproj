@@ -15,19 +15,7 @@
     <Folder Include="Output\" />
     <Folder Include="Utils\" />
     <Folder Include="wwwroot\Admin\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Registration\js\global.js" />
-    <None Include="wwwroot\Registration\vendor\datepicker\daterangepicker.js" />
-    <None Include="wwwroot\Registration\vendor\datepicker\moment.min.js" />
-    <None Include="wwwroot\Registration\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
-    <None Include="wwwroot\Registration\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
-    <None Include="wwwroot\Registration\vendor\jquery\jquery.js" />
-    <None Include="wwwroot\Registration\vendor\jquery\jquery.min.js" />
-    <None Include="wwwroot\Registration\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
-    <None Include="wwwroot\Registration\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
-    <None Include="wwwroot\Registration\vendor\select2\select2.min.js" />
+    <Folder Include="wwwroot\Registration\" />
   </ItemGroup>
 
   <ItemGroup>

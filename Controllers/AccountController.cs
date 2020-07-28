@@ -19,7 +19,7 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignIn(Student student)
+        public IActionResult SignIn(Student student)    
         {
             return RedirectToAction("Login");
         }
@@ -47,6 +47,7 @@ namespace LibraryManagementSystem.Controllers
         {
             return View();
         }
+
 
     }
 }
