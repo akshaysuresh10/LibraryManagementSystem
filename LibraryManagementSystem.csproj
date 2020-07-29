@@ -14,8 +14,43 @@
   <ItemGroup>
     <Folder Include="Output\" />
     <Folder Include="Utils\" />
-    <Folder Include="wwwroot\Admin\" />
     <Folder Include="wwwroot\Registration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Admin\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Admin\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\Admin\js\amcharts.js" />
+    <None Include="wwwroot\Admin\js\bootstrap.js" />
+    <None Include="wwwroot\Admin\js\Chart.bundle.js" />
+    <None Include="wwwroot\Admin\js\Chart.js" />
+    <None Include="wwwroot\Admin\js\Chart.min.js" />
+    <None Include="wwwroot\Admin\js\chartinator.js" />
+    <None Include="wwwroot\Admin\js\classie.js" />
+    <None Include="wwwroot\Admin\js\custom.js" />
+    <None Include="wwwroot\Admin\js\export.min.js" />
+    <None Include="wwwroot\Admin\js\images\dragIconRoundBig.svg" />
+    <None Include="wwwroot\Admin\js\images\lens.svg" />
+    <None Include="wwwroot\Admin\js\index.js" />
+    <None Include="wwwroot\Admin\js\index1.js" />
+    <None Include="wwwroot\Admin\js\index2.js" />
+    <None Include="wwwroot\Admin\js\jquery-1.11.1.min.js" />
+    <None Include="wwwroot\Admin\js\jquery.flot.js" />
+    <None Include="wwwroot\Admin\js\jquery.jqcandlestick.min.js" />
+    <None Include="wwwroot\Admin\js\jquery.nicescroll.js" />
+    <None Include="wwwroot\Admin\js\light.js" />
+    <None Include="wwwroot\Admin\js\metisMenu.min.js" />
+    <None Include="wwwroot\Admin\js\modernizr.custom.js" />
+    <None Include="wwwroot\Admin\js\monthly.js" />
+    <None Include="wwwroot\Admin\js\owl.carousel.js" />
+    <None Include="wwwroot\Admin\js\pie-chart.js" />
+    <None Include="wwwroot\Admin\js\scripts.js" />
+    <None Include="wwwroot\Admin\js\serial.js" />
+    <None Include="wwwroot\Admin\js\SidebarNav.min.js" />
+    <None Include="wwwroot\Admin\js\SimpleChart.js" />
+    <None Include="wwwroot\Admin\js\utils.js" />
+    <None Include="wwwroot\Admin\js\validator.min.js" />
   </ItemGroup>
 
   <ItemGroup>
