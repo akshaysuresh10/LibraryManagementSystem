@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "AddBook";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddBook</h2>
+
+
+<form action="BookAdded" method="post">
+    <h1> BookName</h1>
+    <input type="text" name="BookName" />
+
+    <h1> Author</h1>
+    <input type="text" name="Author" />
+
+    <h1> Prize</h1>
+    <input type="text" name=" Prize" />
+
+    <h1> Catagory</h1>
+    <input type="text" name="Category" />
+    <input type="submit" name="Addbook" />
+
+    <br />
+
+</form>

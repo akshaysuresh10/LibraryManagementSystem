@@ -17,28 +17,10 @@ namespace LibraryManagementSystem.Controllers
         [HttpPost]
         public IActionResult AddBook(Book book)
         {
-            return RedirectToAction("AdminLogin");
+            return View("AdminLogin");
         }
 
-        public IActionResult AdminLogin()
-        {
-            return View();
-        }
-
-       [HttpPost]
-        public IActionResult Loginpage(String  Username,String Password)
-        {
-            if (Username == "Admin" && Password == "1234")
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return RedirectToAction("AdminLogin");
-            }
-            return View();
-            
-        }
+       
         
     }
 }
