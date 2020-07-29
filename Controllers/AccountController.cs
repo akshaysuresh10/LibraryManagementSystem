@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Controllers
         {
             return View();
         }
-        public IActionResult Index2()
+        public IActionResult Registration()
         {
             return View();
         }
