@@ -1,0 +1,76 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.Student>
+@{
+    ViewData["Title"] = "Index2";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">RollNo</th>
+            <th scope="col">Department</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Image</th>
+            <th scope="col"> </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.FirstName</th>
+                <td>@item.LastName</td>
+                <td>@item.RollNo</td>
+                <td>@item.Department</td>
+                <td>@item.Department</td>
+                <td>@item.Email</td>
+                <td>@item.Password</td>
+                <td>@item.Image</td>
+
+
+                <td> <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="binddata('@item.FirstName',)"> Edit</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <input type="text" class="form-control " id="fname" />
+                <br />
+                <input type="text" class="form-control"  id="Secondname"/>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function binddata(fname)
+    {
+        alert("hai"+fname);
+        document.getElementById('fname').value = " "+fname;
+    }
+</script>
+
