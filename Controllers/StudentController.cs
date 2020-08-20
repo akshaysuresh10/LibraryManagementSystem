@@ -30,5 +30,33 @@ namespace LibraryManagementSystem.Controllers
             }
             return View();
         }
+
+
+        [HttpPost]
+        public IActionResult EditStudent(Student studentfromEditform)
+        {
+            try
+            {
+                var selectedStudent = _context.Students.ToList().Where(x=>x.Id==studentfromEditform.Id).FirstOrDefault();
+
+                selectedStudent.FirstName = studentfromEditform.FirstName;
+                selectedStudent.LastName = studentfromEditform.LastName;
+                selectedStudent.RollNo = studentfromEditform.RollNo;
+                selectedStudent.Department = studentfromEditform.Department;
+
+                _context.Students.Update(selectedStudent);
+                _context.SaveChanges();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+            return RedirectToAction("Index2");
+        }
+        
     }
 }
