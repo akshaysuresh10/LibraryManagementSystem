@@ -9,19 +9,38 @@ namespace LibraryManagementSystem.Controllers
 {
     public class BookController : Controller
     {
-        public IActionResult Index()
+        public readonly AppDbContext _context;
+
+        public BookController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+
+        public IActionResult Add()
         {
             return View();
         }
+
 
         [HttpPost]
-        public IActionResult AddBook(Book book)
+        public IActionResult AddBook(Book Book)
+        {
+            _context.Books.Add(Book);
+            _context.SaveChanges();
+            return RedirectToAction("Page2");
+        }
+
+        public IActionResult Page2()
         {
             return View();
         }
 
 
-       
-        
+
+
+
+
+
     }
 }

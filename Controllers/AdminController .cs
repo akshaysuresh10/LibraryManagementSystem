@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryManagementSystem.Controllers
 {
+    
     public class AdminController : Controller
     {
+        private readonly AppDbContext _context;
         public IActionResult Index()
         {
             return View();
