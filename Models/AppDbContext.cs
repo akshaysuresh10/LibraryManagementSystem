@@ -13,6 +13,6 @@ namespace LibraryManagementSystem.Models
 
         }
         public virtual DbSet<Student> Students { get; set; }
-        
+        public virtual DbSet<Book> Books { get; set; }
     }
 }
