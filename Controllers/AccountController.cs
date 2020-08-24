@@ -10,7 +10,7 @@ namespace LibraryManagementSystem.Controllers
     public class AccountController : Controller
     {
         private readonly AppDbContext _context;
-        public AccountController(AppDbContext context)
+        public AccountController (AppDbContext context)
         {
             _context = context;
         }
@@ -22,22 +22,14 @@ namespace LibraryManagementSystem.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult Add(Student Student)
+        public IActionResult Add(Student Student)    
         {
-            //ToDb
-            //Creating an object of AppDbcontext
-            //AppDbContext Context=New AppDbContext() 
             _context.Students.Add(Student);
             _context.SaveChanges();
             return RedirectToAction("Login");
         }
-
-    //    [HttpPost]
-      //  public IActionResult SignIn(Student student)    
-        //{
-        //  return RedirectToAction("Login");
-        //}
        
         public IActionResult Login()
         {
@@ -47,17 +39,27 @@ namespace LibraryManagementSystem.Controllers
         [HttpPost]
         public IActionResult LoginPage(String UserName, String Password)
         {
-            var StudentList = _context.Students.ToList();
+            //get all students details from db
+           var studentsList= _context.Students.ToList();
+            var selectedStudent = studentsList.Where(x => x.Email.ToLower() == UserName.ToLower() && 
+            x.Password== Password).FirstOrDefault();
 
-            var SelectedStudent = StudentList.Where(x => x.Email == UserName && x.Password == Password).FirstOrDefault();
-            if (SelectedStudent==null)
+            if(selectedStudent==null)
             {
-                return RedirectToAction("Login");
+                return RedirectToAction("failed");
             }
             else
             {
-                return RedirectToAction("HomePage");
+                return RedirectToAction("Index", "Homenew");
             }
+
+            
+
+            
+            return View();
+        }
+        public IActionResult failed()
+        {
             return View();
         }
 
