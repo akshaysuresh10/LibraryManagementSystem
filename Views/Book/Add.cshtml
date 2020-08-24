@@ -1,11 +1,11 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_RegistrationLayout.cshtml";
 }
 
-<h1>Index</h1>
-<form action="AddBook" methord="post">
+<h1>Add Book</h1>
+<form action="AddBook" method="post">
 
     <h1> BookName</h1>
     <input type="text" name="BookName" />
@@ -19,6 +19,10 @@
     <h1> Catagory</h1>
     <input type="text" name="Category" />
 
+    <h1> Image</h1>
+    <input type="text" name="Image" />
+
     <br />
     <input type="submit" value="Add" />
 </form>
+
