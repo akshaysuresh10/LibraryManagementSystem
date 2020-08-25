@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.Book>
+    ViewData["Title"] = "ViewBook";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>ViewBook</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">BookName</th>
+            <th scope="col">Author</th>
+            <th scope="col">Prize</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.BookName</th>
+                <td>@item.Author</td>
+                <td>@item.Prize</td>
+                <td>@item.Category</td>
+                <td>@item.Image</td>
+
+                <td> <button class="btn btn-primary" onclick="binddata('@item.BookName','@item.Author','@item.Prize','@item.Category',@item.BookId)"> Edit</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="modal-body">
+    <form action="EditBook" method="post">
+        <input type="hidden" name="Id" id="_id" />
+        <input type="text" class="form-control " id="bname" name="FirstName" />
+        <br />
+        <input type="text" class="form-control" id="author" name="Author" />
+        <br />
+        <input type="text" class="form-control" id="prize" name="Prize" />
+        <br />
+        <input type="text" class="form-control" id="cat" name="Category" />
+        <br />
+        <input type="text" class="form-control" id="img" name="Image" />
+        <br />
+        <input type="submit" />
+        @*<button type="submit" class="btn btn-primary" data-dismiss="modal">save changes</button>*@
+    </form>
+
+</div>
+
+<script>
+    function binddata(bname, author, prize, cat, img, _id) {
+        alert("Are you sure, You want to edit" + bname);
+        document.getElementById('_id').value = _id;
+        document.getElementById('bname').value = " " + bname;
+        document.getElementById('author').value = " " + author;
+        document.getElementById('prize').value = " " + prize;
+        document.getElementById('cat').value = " " + cat;
+        document.getElementById('img').value = " " + img;
+    }
+</script>

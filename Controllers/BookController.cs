@@ -36,9 +36,49 @@ namespace LibraryManagementSystem.Controllers
             return View();
         }
 
+        public IActionResult ViewBook()
+        {
+            try
+            {
+                var BooksList = _context.Books.ToList();
+
+                return View(BooksList);
+
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult EditBook(Book bookfromEditform)
+        {
+            try
+            {
+                var selectedBook = _context.Books.ToList().Where(x => x.BookId == bookfromEditform.BookId).FirstOrDefault();
+
+                selectedBook.BookName = bookfromEditform.BookName;
+                selectedBook.Author = bookfromEditform.Author;
+                selectedBook.Prize = bookfromEditform.Prize;
+                selectedBook.Category = bookfromEditform.Category;
+                selectedBook.Image = bookfromEditform.Image;
+                _context.Books.Update(selectedBook);
+                _context.SaveChanges();
 
 
 
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+            return RedirectToAction("ViewBook");
+        }
 
 
 

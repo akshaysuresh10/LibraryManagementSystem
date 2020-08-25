@@ -2,7 +2,7 @@
 
 namespace LibraryManagementSystem.Migrations
 {
-    public partial class book : Migration
+    public partial class one : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
